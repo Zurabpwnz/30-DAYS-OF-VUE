@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day - 2</title>
+
+	<link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+
+<div id="app"><h2>{{ greeting }}</h2>
+	<p>{{alertMessage}}</p>
+	<button v-on:click="changeGreeting">Change Greeting</button>
+	<button v-on:dblclick="changeGreeting">Double click to change greeting</button>
+	<input v-on:keyup="alertMessageGreeting" placeholder="Type something"/>
+	<input v-on:keyup.enter="alertEnterGreeting" placeholder="Type and release Enter"/>
+
+	<img v-bind:src="cityImage" />
+
+	<button v-on:click="changeCity">
+		Change City
+	</button>
+
+	<p v-if="city === 'Toronto'">
+		by {{ user }} who lives in {{ city }}
+	</p>
+	<p v-if="city === 'Lagos'">
+		by {{ user }} who wishes to visit {{ city }}
+	</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./main.js"></script>
+
+</body>
+</html>
